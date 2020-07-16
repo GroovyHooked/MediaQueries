@@ -1,0 +1,96 @@
+html{
+  min-height: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+header{
+    text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 10px 0px;
+}
+li{
+  padding: 5px 0px;
+  margin: 2px 0px;
+  background-color: #333;
+}
+li a {
+  color: white;
+  text-decoration:none;
+}
+#container{
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+}
+#container div{
+  text-align: center;
+}
+footer{
+  background-color: black;
+}
+footer p{
+  display: inline-block;
+  width: 100%;
+  padding-top: 5%;
+  text-align: center;
+  color: white;
+}
+/*Media queries - à vous re refactoriser le code pour que la page soit mobile first */
+@media screen and (min-width : 480px){
+  body {
+      margin: 0;
+      padding: 0;
+  }
+  header{
+      text-align: center;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+
+  li {
+    border: none;
+    display: inline-block;
+  }
+
+  li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li a:hover {
+    background-color: #111;
+  }
+  #container {
+      display: flex;
+      flex-direction: row;
+      min-height: 100%;
+  }
+
+  #container div {
+
+  	width: 30%;
+  }
+
+  footer {
+    text-align: center;
+    width: 100%;
+  	background-color: #333;
+  	color: white;
+  }
+}
