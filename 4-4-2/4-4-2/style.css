@@ -1,0 +1,44 @@
+ body{
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: 0 0, center;
+    background-attachment: fixed;
+ } 
+
+@media (orientation: landscape) {
+    body {
+        background-image: url(football-ground.jpg);
+    }
+  
+  }
+  
+  @media (orientation: portrait) {
+    body {
+        background-image: url(football-ground2.jpg);
+    }
+    .gardien{
+        position: absolute;
+        top: 85%;
+        left: 40%;
+    }
+    .defense{
+        position: absolute;
+        left: 8%;
+        top: 68%;
+    }
+    .milieu{
+        position: absolute;
+        left: 30%;
+        top: 50%;
+    }
+    .ss-attaque{
+        position: absolute;
+        left: 20%;
+        top: 30%;
+    }
+    .attaque{
+        position: absolute;
+        left: 40%;
+        top: 13%;
+    }
+  }
