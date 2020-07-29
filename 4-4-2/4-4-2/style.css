@@ -1,44 +1,175 @@
- body{
-    background-repeat: no-repeat; 
-    background-size: cover;
-    background-position: 0 0, center;
+body{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     background-attachment: fixed;
+    --ballonY: -156%;
+    --ballonX: -220%;
+    margin: auto;
  } 
-
+ .ballon > img{
+    width: 100%;
+ }
+ .maillot{
+     height: 100%;
+ }
+.choix{
+    position: absolute;
+    top: 30px;
+    display: flex;
+    flex-direction: column;
+}
 @media (orientation: landscape) {
     body {
         background-image: url(football-ground.jpg);
+        display: flex;
+        height: 100vh;
+        width: 100vw;
     }
-  
+    .un{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100%;
+        width: 100%;      
+    }
+    .ballon{
+        position: relative;
+        height: 7%;
+        width: 7%;
+        left: 79%;
+        top: 4%;
+     }
+     .ballon:hover{
+        animation-duration: 4s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;  
+        animation-name: play;
+   }
+   @keyframes play {
+       0% {
+           transform: translate(0%);
+       }
+       16.66% {
+           transform: translate(var(--ballonX), 270% );
+       }
+       33.33% {
+           transform: translate(calc(var(--ballonX)*2), 100%);
+       }
+       50% {
+        transform: translate(calc(var(--ballonX)*3), 200% );
+       }
+       66.66% {
+        transform: translate(calc(var(--ballonX)*4), 0% );
+       }
+       100% {
+        transform: translate(calc(var(--ballonX)*10), -500%);
+       }
+   }
+     .line{
+        display: flex;
+        height: 10%;
+    }
+    .gardien{        
+        flex-direction: column;
+        justify-content: center;
+    }
+    .defense{      
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .defense img{
+        margin-top: 15%;
+        margin-bottom: 15%;
+    }
+    .milieu{      
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .milieu img{
+        margin-top: 15%;
+        margin-bottom: 15%;
+    }
+    .ss-attaque{       
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .ss-attaque img{
+        margin-top: 15%;
+        margin-bottom: 15%;
+    }
+    .attaque{       
+        flex-direction: column;
+        justify-content: center;
+    }
   }
   
   @media (orientation: portrait) {
     body {
         background-image: url(football-ground2.jpg);
+        display: flex;
+        height: 100vh;
+        width: 100vw;
     }
-    .gardien{
-        position: absolute;
-        top: 85%;
-        left: 40%;
+    .un{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100%;
+        width: 100%;      
     }
-    .defense{
-        position: absolute;
-        left: 8%;
-        top: 68%;
+    .ballon{
+        position: relative;
+        height: 10%;
+        width: 10%;
+        top: 84%;
+        left: 2%;  
+     }  
+     .ballon:hover{
+         animation-duration: 4s;
+         animation-fill-mode: forwards;
+         animation-iteration-count: 1;  
+         animation-name: play;
     }
-    .milieu{
-        position: absolute;
-        left: 30%;
+    @keyframes play {
+        0% {
+            transform: translate(0%);
+        }
+        16.66% {
+            transform: translate(250%, var(--ballonY));
+        }
+        33.33% {
+            transform: translate(-110%, calc(var(--ballonY)*2));
+        }
+        50% {
+            transform: translate(210%, calc(var(--ballonY)*3));
+        }
+        66.66% {
+            transform: translate(0%, calc(var(--ballonY)*4));
+        }
+        100% {
+            transform: translateY(calc(var(--ballonY)*10));
+        }
+    }
+   .line{
+       display: flex;
+       height: 10%;
+   }
+    .defense{      
+        width: 70%;
+        justify-content: space-evenly;
+    }
+    .milieu{        
+        width: 50%;
+        justify-content: space-evenly;
+    }
+    .ss-attaque{       
+        width: 70%;
+        justify-content: space-evenly;
+    }  
+    .p11:hover .ballon{
         top: 50%;
-    }
-    .ss-attaque{
-        position: absolute;
-        left: 20%;
-        top: 30%;
-    }
-    .attaque{
-        position: absolute;
-        left: 40%;
-        top: 13%;
+        left: 5%;
     }
   }
