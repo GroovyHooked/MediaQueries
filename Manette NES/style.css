@@ -1,0 +1,287 @@
+* {
+    font-family: Calibri;
+ }
+ /**********************************************************************************
+       Gestion simple du conteneur du controlleur
+     **********************************************************************************/
+ .controller-container {
+     display: block;
+     position: relative;
+     margin: 100px auto;;
+     text-align: center;
+     height: 300px;
+     min-width: 800px;
+     width: 70%;
+     max-width: 800px;
+     background-color: lightgrey;
+     border-radius: 5px;
+     border: 3px solid #cacaca;
+ }
+ .controller-container:after{
+     content: "";
+     position: absolute;
+     left: 190;
+     top: -2;
+     width: 30px;
+     height: 15px;
+     background-color: rgb(179, 179, 179);
+     border-bottom: 2px ridge rgb(139, 139, 139);
+     border-left: 2px ridge rgb(194, 192, 192);
+     border-right: 3px ridge rgb(194, 192, 192);
+ }
+ /**********************************************************************************
+       Partie globale de la manette (partie gris claire plus gris foncé)
+     **********************************************************************************/
+ .nes-controller .dark-part {
+     position: absolute;
+     background-image: url(data:image/png;base64,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);
+     background-color: #101314;
+     border-radius: 5px;
+     height: 232px;
+     width: 93%;
+     top: 45px;
+     left: 25px;
+     border-bottom: 2px solid #868583;
+ }
+
+
+ /**********************************************************************************
+       Gestion des flèches du contrôleur (partie de gauche)
+     **********************************************************************************/
+span[class="leftright arrows"]{
+    position: absolute;
+    left: 38;
+    top: 120;
+    width: 43px;
+    height: 43px;
+    background-color: black;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border: 3px solid white;
+    border-top: transparent;
+    transition: all;
+    transform-origin: center center;
+    transform: rotate(90deg);  
+}
+span[class="leftright arrows-outline"]{
+    position: absolute;
+    left: 128;
+    top: 120;
+    width: 43px;
+    height: 43px;
+    background-color: black;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border: 3px solid white;
+    border-top: transparent;
+    transition: all;
+    transform-origin: center center;
+    transform: rotate(-90deg);
+   
+}
+
+span[class="updown arrows-outline"]{
+    position: absolute;
+    left: 84;
+    top: 165;
+    width: 43px;
+    height: 43px;
+    background-color: black;
+    border: 3px solid white;
+    border-bottom: transparent;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    transition: all;
+    transform-origin: center center;
+    transform: rotate(-180deg);
+    
+}
+span[class="updown arrows"]{
+    position: absolute;
+    left: 83;
+    top: 74;
+    width: 43px;
+    height: 44px;
+    background-color: black;
+    border: 3px solid white;
+    border-bottom: transparent;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;   
+}
+span[class="updown arrows"]:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 44;
+    width: 44px;
+    height: 44px;
+    background-color: black;
+    
+}
+
+ /**********************************************************************************
+       Partie centrale de la manette : rectangles gris, plus les bouttons
+     **********************************************************************************/
+
+
+span:nth-child(5){
+    position: absolute;
+    left: 240;
+    width: 210px;
+    height: 35px;
+    background-color: rgb(160, 160, 160);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+span:nth-child(6){
+    position: absolute;
+    left: 240;
+    top: 45;
+    width: 210px;
+    height: 35px;
+    background-color: rgb(160, 160, 160);
+    border-radius: 8px;
+}
+span:nth-child(7){
+    position: absolute;
+    left: 240;
+    top: 90;
+    width: 210px;
+    height: 35px;
+    background-color: rgb(160, 160, 160);
+    border-radius: 8px;
+    color: rgb(202, 89, 89);
+    line-height: 35px;
+    font-size: 1.7em;
+    font-weight: 900;
+}
+div[class="grey-separator buttons"]{
+    position: absolute;
+    left: 240;
+    top: 136;
+    width: 210px;
+    max-width: 210px;
+    height: 60px;
+    background-color: #dfdfdf;
+    border-radius: 8px;
+    /*border: 2px solid grey;*/
+}
+div[class="grey-separator buttons"]:after{
+    content: "";
+    position: absolute;
+    left: 3;
+    top: 3;
+    height: 45px;
+    width: 193px;
+    background-color: transparent;
+    border: 5px solid rgb(180, 179, 179);
+    border-bottom: 5px inset rgb(192, 192, 192);
+    border-radius: 8px;
+}
+div[class="grey-separator buttons"] span.button:nth-child(1){
+    position: absolute;
+    top: 20;
+    left: 25;
+    width: 60px;
+    height: 18px;
+    background-color: #282A2B;
+    border-radius: 8px;
+}
+div[class="grey-separator buttons"] span.button:nth-child(2){
+    position: absolute;
+    top: 20;
+    left: 115;
+    width: 60px;
+    height: 18px;
+    background-color: #282A2B;
+    border-radius: 8px;
+}
+span:nth-child(9){
+    position: absolute;
+    left: 240;
+    top: 210;
+    width: 210px;
+    height: 22px;
+    background-color: rgb(160, 160, 160);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+/**********************************************************************************
+       Partie doite de la manette 
+     **********************************************************************************/
+div[class="nintendo-logo"]{
+    color: tomato;
+    position: absolute;
+    left: 500;
+    top: 30px;
+    font-size: 2.2em;
+}
+
+div.right-button{
+    display: inline-block;
+    height: 70px;
+    width: 70px;
+    background-color: whitesmoke;
+    position: relative;
+    left: 215;
+    top: 135;
+    border-radius: 8px;
+    margin: 0 7px;
+    color: red;
+    font-size: 1.3em;
+}
+
+div.outline{
+    position: relative;
+    top: 6;
+    left: 6;
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+
+    background: radial-gradient(circle 50px at 15px 25%, rgb(241, 84, 84), rgb(238, 78, 78) 50%, #eee 90%, rgb(255, 0, 0) 100%);
+    border: 1px solid black;
+    margin-bottom: 15px;
+}
+.image{
+    margin-top: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 110px;
+    height: 120px;
+    background-image: url(zelda.png);
+    background-position: 0 -12px;
+  
+  }
+span[class="leftright arrows"]:active ~ .image{  /* gauche */
+    animation: play 2s steps(10) infinite;
+    animation-name: play4;
+}
+@keyframes play4 {
+    from { background-position: -1200px -652px; }
+    to { background-position: 0px -652px; }
+ }
+span[class="leftright arrows-outline"]:active ~ .image{  /* droite */
+    animation: play 2s steps(10) infinite;
+    animation-name: play6;
+}
+@keyframes play6 {
+    from { background-position: 0px -920px; }
+    to { background-position: -1200px -920px; }
+ }
+span[class="updown arrows-outline"]:active ~ .image{
+    animation: play 2s steps(10) infinite;
+    animation-name: play3;
+}
+@keyframes play5 {
+    from { background-position: 0px -780px; }
+    to { background-position: -1200px -780px; }
+ }
+span[class="updown arrows"]:active ~ .image{
+    animation: play 2s steps(10) infinite;
+    animation-name: play5;
+}
+@keyframes play3 {
+    from { background-position: 0px -525px; }
+    to { background-position: -1200px -525px; }
+ }
