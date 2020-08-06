@@ -284,18 +284,19 @@ span[class="updown arrows-outline"]:active ~ .image{
     animation: play 2s steps(10) infinite;
     animation-name: play3;
 }
-@keyframes play5 {
-    from { background-position: 0px -780px; }
-    to { background-position: -1200px -780px; }
- }
-span[class="updown arrows"]:active + .image{
-    animation: play 2s steps(10) infinite;
-    animation-name: play5;
-}
 @keyframes play3 {
     from { background-position: 0px -525px; }
     to { background-position: -1200px -525px; }
  }
+span[class="updown arrows"]:active ~ .image{
+    animation: play 2s steps(10) infinite;
+    animation-name: play5;
+}
+@keyframes play5 {
+    from { background-position: 0px -780px; }
+    to { background-position: -1200px -780px; }
+ }
+
 
  div.right-button:nth-child(11) > div:nth-child(1):active + .image{
     animation: play1 1s steps(3) 1s infinite;
